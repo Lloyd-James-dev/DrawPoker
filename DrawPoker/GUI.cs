@@ -59,7 +59,7 @@ namespace DrawPoker {
             PrintColours("  3 of a Kind.........3\n", "White", "Black");
             PrintColours("  Two Pair............2\n", "White", "Black");
             PrintColours("=========================\n", "DarkRed", "Black");
-            PrintColours(string.Format("{0,25}", "Credits: " + Program.credits), "Yellow", "Black");
+            PrintColours(string.Format("{0,24}", "Credits: " + Program.credits), "Yellow", "Black");
             Console.WriteLine();
             Console.Write("\nAny key to start...\n");
             Console.ReadKey();
@@ -214,7 +214,7 @@ namespace DrawPoker {
         }
 
         /// <summary>
-        ///  "We are in the End Game now!"
+        /// "We are in the End Game now!"
         /// </summary>
         /// <returns>true if no credits remaining</returns>
         public bool EndGame() {

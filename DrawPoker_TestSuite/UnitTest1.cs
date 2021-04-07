@@ -8,9 +8,9 @@ namespace DrawPoker_TestSuite {
     public class UnitTest1 {
         [TestMethod]
         public void TestOnePair() {
-            GUI gui = new GUI();
-            Deck deck = new Deck();
-            Hand hand = new Hand();
+            GUI gui = new();
+            Deck deck = new();
+            Hand hand = new();
             hand.Cards.Clear();
             hand.Cards.Add(deck.Pack.ElementAt(0));
             hand.Cards.Add(deck.Pack.ElementAt(1));
@@ -23,9 +23,9 @@ namespace DrawPoker_TestSuite {
         }
         [TestMethod]
         public void TestTwoPair() {
-            GUI gui = new GUI();
-            Deck deck = new Deck();
-            Hand hand = new Hand();
+            GUI gui = new ();
+            Deck deck = new ();
+            Hand hand = new ();
             hand.Cards.Clear();
             hand.Cards.Add(deck.Pack.ElementAt(0));
             hand.Cards.Add(deck.Pack.ElementAt(1));
@@ -38,9 +38,9 @@ namespace DrawPoker_TestSuite {
         }
         [TestMethod]
         public void TestThreeOfAKind() {
-            GUI gui = new GUI();
-            Deck deck = new Deck();
-            Hand hand = new Hand();
+            GUI gui = new ();
+            Deck deck = new ();
+            Hand hand = new ();
             hand.Cards.Clear();
             hand.Cards.Add(deck.Pack.ElementAt(0));
             hand.Cards.Add(deck.Pack.ElementAt(1));
@@ -53,9 +53,9 @@ namespace DrawPoker_TestSuite {
         }
         [TestMethod]
         public void TestStraight() {
-            GUI gui = new GUI();
-            Deck deck = new Deck();
-            Hand hand = new Hand();
+            GUI gui = new ();
+            Deck deck = new ();
+            Hand hand = new ();
             hand.Cards.Clear();
             hand.Cards.Add(deck.Pack.ElementAt(0));
             hand.Cards.Add(deck.Pack.ElementAt(1));
@@ -68,9 +68,9 @@ namespace DrawPoker_TestSuite {
         }
         [TestMethod]
         public void TestFlush() {
-            GUI gui = new GUI();
-            Deck deck = new Deck();
-            Hand hand = new Hand();
+            GUI gui = new ();
+            Deck deck = new ();
+            Hand hand = new ();
             hand.Cards.Clear();
             hand.Cards.Add(deck.Pack.ElementAt(0));
             hand.Cards.Add(deck.Pack.ElementAt(4));
@@ -83,9 +83,9 @@ namespace DrawPoker_TestSuite {
         }
         [TestMethod]
         public void TestFullHouse() {
-            GUI gui = new GUI();
-            Deck deck = new Deck();
-            Hand hand = new Hand();
+            GUI gui = new ();
+            Deck deck = new ();
+            Hand hand = new ();
             hand.Cards.Clear();
             hand.Cards.Add(deck.Pack.ElementAt(0));
             hand.Cards.Add(deck.Pack.ElementAt(13));
@@ -98,9 +98,9 @@ namespace DrawPoker_TestSuite {
         }
         [TestMethod]
         public void TestFourOfAKind() {
-            GUI gui = new GUI();
-            Deck deck = new Deck();
-            Hand hand = new Hand();
+            GUI gui = new ();
+            Deck deck = new ();
+            Hand hand = new ();
             hand.Cards.Clear();
             hand.Cards.Add(deck.Pack.ElementAt(0));
             hand.Cards.Add(deck.Pack.ElementAt(13));
@@ -113,9 +113,9 @@ namespace DrawPoker_TestSuite {
         }
         [TestMethod]
         public void TestStraightFlushAto5() {
-            GUI gui = new GUI();
-            Deck deck = new Deck();
-            Hand hand = new Hand();
+            GUI gui = new ();
+            Deck deck = new ();
+            Hand hand = new ();
             hand.Cards.Clear();
             hand.Cards.Add(deck.Pack.ElementAt(39));
             hand.Cards.Add(deck.Pack.ElementAt(27));
@@ -128,9 +128,9 @@ namespace DrawPoker_TestSuite {
         }
         [TestMethod]
         public void TestStraightFlush9toK() {
-            GUI gui = new GUI();
-            Deck deck = new Deck();
-            Hand hand = new Hand();
+            GUI gui = new ();
+            Deck deck = new ();
+            Hand hand = new ();
             hand.Cards.Clear();
             hand.Cards.Add(deck.Pack.ElementAt(11));
             hand.Cards.Add(deck.Pack.ElementAt(23));
@@ -143,9 +143,9 @@ namespace DrawPoker_TestSuite {
         }
         [TestMethod]
         public void TestRoyalFlush() {
-            GUI gui = new GUI();
-            Deck deck = new Deck();
-            Hand hand = new Hand();
+            GUI gui = new ();
+            Deck deck = new ();
+            Hand hand = new ();
             hand.Cards.Clear();
             hand.Cards.Add(deck.Pack.ElementAt(11));
             hand.Cards.Add(deck.Pack.ElementAt(23));
