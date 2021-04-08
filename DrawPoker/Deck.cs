@@ -11,7 +11,7 @@ namespace DrawPoker {
             Pack = CreateDeck();
         }
         private static List<int[]> CreateDeck() {
-            var list = new List<int[]>();
+            List<int[]> list = new();
             for (int i = 0; i < 52; i++) {
                 int[] d = { i % 13, i % 4 };
                 list.Add(d);
@@ -26,7 +26,7 @@ namespace DrawPoker {
                 Cards = CardsToDeal(5);
             }
             public List<int[]> CardsToDeal(int num) {
-                var list = new List<int[]>();
+                List<int[]> list = new();
                 for (int i = 0; i < num; i++) {
                     int x = (int)Math.Ceiling(r.NextDouble() * (Pack.Count - 1));
                     list.Add(Pack.ElementAt(x));
@@ -65,7 +65,7 @@ namespace DrawPoker {
             /// </summary>
             /// <returns>An integer representing the win code</returns>
             public int CheckForWinner() {
-                var chk = Cards.OrderBy(x => x[0]).ToList();
+                List<int[]> chk = Cards.OrderBy(x => x[0]).ToList();
                 bool flush = false;
                 bool straight = false;
                 int count;
