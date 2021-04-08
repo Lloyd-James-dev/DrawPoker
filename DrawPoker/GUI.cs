@@ -50,14 +50,17 @@ namespace DrawPoker {
             PrintColours("    1 credit per hand\n", "DarkMagenta", "Black");
             PrintColours("       Good Luck!!\n", "Blue", "Black");
             PrintColours("=========================\n", "DarkRed", "Black");
-            PrintColours("  Royal Flush......1000\n", "White", "Black");
-            PrintColours("  Straight Flush....100\n", "White", "Black");
-            PrintColours("  4 of a Kind........50\n", "White", "Black");
-            PrintColours("  Full House.........20\n", "White", "Black");
-            PrintColours("  Flush..............10\n", "White", "Black");
-            PrintColours("  Straight............5\n", "White", "Black");
-            PrintColours("  3 of a Kind.........3\n", "White", "Black");
-            PrintColours("  Two Pair............2\n", "White", "Black");
+            PrintColours(string.Format("  {0}{1}\n", "Royal Flush".PadRight(15, '.'), winValues[9].ToString().PadLeft(6, '.')), "White", "Black");
+            PrintColours(string.Format("  {0}{1}\n", "Straight Flush".PadRight(15, '.'), winValues[8].ToString().PadLeft(6, '.')), "White", "Black");
+            PrintColours(string.Format("  {0}{1}\n", "4 of a Kind".PadRight(15, '.'), winValues[7].ToString().PadLeft(6, '.')), "White", "Black");
+            PrintColours(string.Format("  {0}{1}\n", "Full House".PadRight(15, '.'), winValues[6].ToString().PadLeft(6, '.')), "White", "Black");
+            PrintColours(string.Format("  {0}{1}\n", "Flush".PadRight(15, '.'), winValues[5].ToString().PadLeft(6, '.')), "White", "Black");
+            PrintColours(string.Format("  {0}{1}\n", "Straight".PadRight(15, '.'), winValues[4].ToString().PadLeft(6, '.')), "White", "Black");
+            PrintColours(string.Format("  {0}{1}\n", "3 of a Kind".PadRight(15, '.'), winValues[3].ToString().PadLeft(6, '.')), "White", "Black");
+            PrintColours(string.Format("  {0}{1}\n", "Two Pair".PadRight(15, '.'), winValues[2].ToString().PadLeft(6, '.')), "White", "Black");
+            if (winValues[1] > 0) {
+                PrintColours(string.Format("  {0}{1}\n", "One Pair".PadRight(15, '.'), winValues[1].ToString().PadLeft(6, '.')), "White", "Black");
+            }
             PrintColours("=========================\n", "DarkRed", "Black");
             PrintColours(string.Format("{0,24}", "Credits: " + Program.credits), "Yellow", "Black");
             Console.WriteLine();
