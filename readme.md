@@ -1,9 +1,10 @@
 # Lloyd's Draw Poker
 A simple poker game made as a console application.
 
-##Screenshots
-![Introduction](https://raw.githubusercontent.com/Lloyd-James-dev/DrawPoker/master/DrawPoker/Resources/DrawPoker_Intro.png)
-![In-game](https://raw.githubusercontent.com/Lloyd-James-dev/DrawPoker/master/DrawPoker/Resources/DrawPoker_Game.png)
+## Screenshots
+Introduction | Gameplay
+------------ | --------
+![Introduction](https://raw.githubusercontent.com/Lloyd-James-dev/DrawPoker/master/DrawPoker/Resources/DrawPoker_Intro.png) | ![In-game](https://raw.githubusercontent.com/Lloyd-James-dev/DrawPoker/master/DrawPoker/Resources/DrawPoker_Game.png)
 
 Suggestion - Change font size
 1. Click the **icon** in the top left of the window
