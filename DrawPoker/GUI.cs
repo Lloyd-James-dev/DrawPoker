@@ -7,18 +7,6 @@ namespace DrawPoker {
 
         public readonly string[] faceValue = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
         public readonly string[] suiteValue = { "♣", "♦", "♥", "♠" };
-        private readonly string[] wins = {  // Win code
-            "    No Win     ",              // 0
-            "   One Pair    ",              // 1
-            "   Two Pair    ",              // 2
-            "  3 of a Kind  ",              // 3
-            "   Straight    ",              // 4
-            "     Flush     ",              // 5
-            "  Full House   ",              // 6
-            "  4 of a Kind  ",              // 7
-            "Straight Flush ",              // 8
-            "✶ Royal Flush ✶",              // 9
-        };
         private readonly int[] winValues = { 
             0,         // 0. No win
             0,         // 1. One pair
@@ -131,22 +119,21 @@ namespace DrawPoker {
         /// <summary>
         /// Displays the result and credits
         /// </summary>
-        /// <param name="w">winning code</param>
-        public void DisplayWin(int w) {
-
-            /*  code #  Result            values      myValues
-                ==============================================
-                1       Pair,             1           0
-                2       TwoPair,          2           2
-                3       ThreeOfKind,      3           3
-                4       Straight,         4           5
-                5       Flush,            6           10
-                6       FullHouse,        9           20
-                7       FourOfKind,       25          50
-                8       StraightFlush,    50          100
-                9       RoyalFlush        800         1000
-            */
-            switch (w) {
+        /// <param name="winCode">winning code</param>
+        public void DisplayWin(int winCode) {
+            string[] win = {                   // Win code
+                "    No Win     ",              // 0 or default
+                "   One Pair    ",              // 1
+                "   Two Pair    ",              // 2
+                "  3 of a Kind  ",              // 3
+                "   Straight    ",              // 4
+                "     Flush     ",              // 5
+                "  Full House   ",              // 6
+                "  4 of a Kind  ",              // 7
+                "Straight Flush ",              // 8
+                "✶ Royal Flush ✶",              // 9
+            };
+            switch (winCode) {
                 case 1: // one pair
                     WinColours("Blue", "DarkBlue");
                     WinAmount(winValues[1]);
@@ -188,13 +175,13 @@ namespace DrawPoker {
                     WinAmount(winValues[0]);
                     break;
             }
-            void WinColours(string c0, string c1) {
+            void WinColours(string colour0, string colour1) {
                 Console.WriteLine();
-                PrintColours(" ╔═════════════════════╗ ", c0, c1);
+                PrintColours(" ╔═════════════════════╗ ", colour0, colour1);
                 Console.WriteLine();
-                PrintColours(string.Format(" ║{0,18}   ║ ", wins[w]), c0, c1);
+                PrintColours(string.Format(" ║{0,18}   ║ ", win[winCode]), colour0, colour1);
                 Console.WriteLine();
-                PrintColours(" ╚═════════════════════╝ ", c0, c1);
+                PrintColours(" ╚═════════════════════╝ ", colour0, colour1);
                 Console.WriteLine();
             }
             void WinAmount(int amount) {
